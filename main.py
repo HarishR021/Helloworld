@@ -1,3 +1,4 @@
+#Swaplist
 def swapList(newone):
     size=len(newone)
 
@@ -10,3 +11,10 @@ def swapList(newone):
     return newone
 newone=[1,3,4,5,6]
 print(swapList(newone))
+
+#test
+n = int(input("enter:"))
+if n >= 100:
+    print(True)
+else:
+    print(False)
