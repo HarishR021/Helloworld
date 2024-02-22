@@ -50,3 +50,32 @@ elif table_is_available:
 else:
     play_chess_at_home()
 
+#largest among three numbers 2 diff methods
+#1
+number1 = int(input("Enter the first number: "))
+number2 = int(input("Enter the second number: "))
+
+if number1 > number2:
+    larger_number = number1
+else:
+    larger_number = number2
+
+print("The larger number is:", larger_number)
+
+#2
+# Read three numbers
+number1 = int(input("Enter the first number: "))
+number2 = int(input("Enter the second number: "))
+number3 = int(input("Enter the third number: "))
+
+# We temporarily assume that the first number is the largest one. We will verify this soon.
+largest_number = number1
+
+if number2 > largest_number:
+    largest_number = number2
+
+if number3 > largest_number:
+    largest_number = number3
+
+print("The largest number is:", largest_number)
+
