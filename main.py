@@ -10,8 +10,9 @@ def swapList(newone):
     print("please check below")
     return newone
 newone=[1,3,4,5,6]
-print(swapList(newone))
-
+print(swapList(newone))                             \\ouput : Here is the ouput after swapping
+                                                              please check below
+                                                              [6, 3, 4, 5, 1]
 
 #2 largest among three numbers
 number1 = int(input("Enter the first number: "))
