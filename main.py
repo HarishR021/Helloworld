@@ -1,4 +1,4 @@
-#1 Swaplist
+#1 Swaplist first element and last element
 def swapList(newone):
     size=len(newone)
 
@@ -30,4 +30,11 @@ elif name=="spathiphyllum":
 else:
     print("Spathiphyllum! Not",name+"!")
 
-#4
+#4 Swapping three elements in a List
+def swapPositions(my_list, pos1, pos2, pos3):
+    my_list[pos1], my_list[pos2], my_list[pos3] = my_list[pos3], my_list[pos1], my_list[pos2]
+    return my_list
+
+my_list = [23, 65, 19, 90, 45]
+pos0, pos3, pos4 = 0, 3, 4
+print(swapPositions(my_list, pos0, pos3, pos4))
