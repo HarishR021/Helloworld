@@ -31,10 +31,23 @@ else:
     print("Spathiphyllum! Not",name+"!")
 
 #4 Swapping three elements in a List
-def swapPositions(my_list, pos1, pos2, pos3):
-    my_list[pos1], my_list[pos2], my_list[pos3] = my_list[pos3], my_list[pos1], my_list[pos2]
-    return my_list
+def swapPositions(lst, pos1, pos2,pos3):
+    lst[pos1], lst[pos2],lst[pos3] = lst[pos3], lst[pos1] , lst[pos2]
+    return lst
+List = [26,36,75,42,94,253]
+pos0, pos3 ,pos4 = 0, 3 ,4
+print(swapPositions(List, pos0, pos3, pos4))   \\ouput : [94, 36, 75, 26, 42, 253]
 
-my_list = [23, 65, 19, 90, 45]
-pos0, pos3, pos4 = 0, 3, 4
-print(swapPositions(my_list, pos0, pos3, pos4))
+#length of string using diff methods
+new_list=[1,2,3,5,6,7,8,5]
+#using len
+yupp=len(new_list)
+#using sum
+aprox=sum(1 for i in new_list)
+#using counter
+counter=0
+for i in new_list:
+    counter=counter+1
+print("the length of the list is", yupp)            \\ouput: the length of the list is 8
+print("the length of the list is " + str(aprox))    \\ouput: the length of the list is 8
+print("the length of the list is " + str(counter))  \\output:the length of the list is 8
