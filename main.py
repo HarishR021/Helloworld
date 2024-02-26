@@ -21,7 +21,6 @@ number3 = int(input("Enter the third number: "))
 largest_number = max(number1, number2, number3)
 print("The largest number is:", largest_number)
 
-
 #3 Spathiphyllum plant sampletest
 name=input("enter flower name:")
 if name=="Spathiphyllum":
@@ -39,7 +38,7 @@ List = [26,36,75,42,94,253]
 pos0, pos3 ,pos4 = 0, 3 ,4
 print(swapPositions(List, pos0, pos3, pos4))   \\ouput : [94, 36, 75, 26, 42, 253]
 
-#length of string using diff methods
+#5 Length of string using diff methods
 new_list=[1,2,3,5,6,7,8,5]
 #using len
 yupp=len(new_list)
@@ -52,3 +51,12 @@ for i in new_list:
 print("the length of the list is", yupp)            \\ouput: the length of the list is 8
 print("the length of the list is " + str(aprox))    \\ouput: the length of the list is 8
 print("the length of the list is " + str(counter))  \\output:the length of the list is 8
+
+#6 checking the variable is in list or not
+test_list = [1, 6, 3, 5, 3, 4]
+check = int(input("Enter the element to check: "))
+if check in test_list:
+    print("Element Exists")
+else:
+    print("Not Exists")                             \\output :Enter the element to check: 2
+                                                              Not Exists
