@@ -52,7 +52,7 @@ print("the length of the list is", yupp)            \\ouput: the length of the l
 print("the length of the list is " + str(aprox))    \\ouput: the length of the list is 8
 print("the length of the list is " + str(counter))  \\output:the length of the list is 8
 
-#6 checking the variable is in list or not
+#6 Checking the variable is in list or not
 test_list = [1, 6, 3, 5, 3, 4]
 check = int(input("Enter the element to check: "))
 if check in test_list:
@@ -60,7 +60,7 @@ if check in test_list:
 else:
     print("Not Exists")                             \\output :Enter the element to check: 2
                                                               Not Exists
-#matrices
+#7 Matrices
 import numpy as np
 a=np.matrix([[2,5],[3,2]])
 b=np.matrix([[7,6],[4,5]])
@@ -69,4 +69,25 @@ print(np.subtract(a,b))
 print(np.multiply(a,b))
 print(np.divide(a,b))
 
-#
+#8 Calendar
+import calendar
+year=int(input("enter year: "))
+month=int(input("enter month: "))
+print(calendar.month(year,month))
+
+#9 Positie, Negative and Zero
+a = float(input("Enter a value: "))
+if a > 0:
+    print("Number is Positive")
+elif a < 0:
+    print("Number is Negative")
+else:
+    print("Number is zero")
+
+#10 Even or odd
+hipe=float(input("enter a value : "))
+if(hipe%2!=0):
+    print("Odd number")
+else:
+    print("Even number")
+
