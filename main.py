@@ -60,3 +60,13 @@ if check in test_list:
 else:
     print("Not Exists")                             \\output :Enter the element to check: 2
                                                               Not Exists
+#matrices
+import numpy as np
+a=np.matrix([[2,5],[3,2]])
+b=np.matrix([[7,6],[4,5]])
+print(np.add(a,b))
+print(np.subtract(a,b))
+print(np.multiply(a,b))
+print(np.divide(a,b))
+
+#
