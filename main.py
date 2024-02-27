@@ -105,4 +105,124 @@ for year in range(begin_year,end_year+1):
     if((year%4==0) and (year%100!=0) or (year%400==0)):
         print(year)
 
-#
+#13 prime number or not
+num = int(input("Enter a number: "))
+if num <= 1:
+    print(f"{num} is not a prime number.")
+else:
+    is_prime = True
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+    if is_prime:
+        print(f"{num} is a prime number.")
+    else:
+        print(f"{num} is not a prime number.")
+
+#14 obtain prime number between range
+start = int(input("Enter the start of the interval: "))
+end = int(input("Enter the end of the interval: "))
+def is_prime(number):
+    if number <= 1:
+        return False
+    for i in range(2, int(number**0.5) + 1):
+        if number % i == 0:
+            return False
+    return True
+print(f"Prime numbers in the interval [{start}, {end}]:")
+for num in range(start, end + 1):
+    if is_prime(num):
+        print(num)
+
+#15 factorial of a number
+num = int(input("Enter a number: "))
+factorial = 1
+if num < 0:
+   print(" Factorial does not exists")
+elif num == 0:
+   print("The factorial of 0 is 1")
+else:
+   for i in range(1,num + 1):
+       factorial = factorial*i
+   print("The factorial of",num,"is",factorial)
+
+#16 Multiplication table
+number = int(input ("Enter the number: "))
+count = 1
+print ("The Multiplication Table of: ", number)    #while loop for iterating the multiplication 10 times
+while count <= 10:
+    number = number * 1
+    print (number, 'x', count, '=', number * count)
+    count += 1
+
+#17 fibonacci series
+n = int(input ("Enter the number: "))
+a = 0
+b = 1
+for i in range(0,n):
+    print(a, end = " ")
+    c = a+b
+    a = b
+    b = c
+
+# 18. Sum of natural numbers
+num = int(input("Enter a positive integer: "))
+sum_natural = sum(range(1, num + 1))
+print(f"The sum of natural numbers up to {num} is {sum_natural}")
+
+# 19. Check if a number is Armstrong
+num = int(input("Enter a number to check if it's an Armstrong number: "))
+num_str = str(num)
+num_digits = len(num_str)
+armstrong_sum = sum(int(digit) ** num_digits for digit in num_str)
+is_armstrong = armstrong_sum == num
+print(f"{num} is {'an' if is_armstrong else 'not an'} Armstrong number")
+
+# 20. Reverse a string
+string_input = input("Enter a string: ")
+reversed_string = string_input[::-1]
+print(f"The reversed string is: {reversed_string}")
+
+# 21. Check if a string is a palindrome
+string_input = input("Enter a string to check if it's a palindrome: ")
+is_palindrome = string_input == string_input[::-1]
+print(f"The string {'is' if is_palindrome else 'is not'} a palindrome")
+
+# 22. Calculate the average of numbers in a list
+numbers = [float(x) for x in input("Enter numbers separated by space: ").split()]
+average = sum(numbers) / len(numbers)
+print(f"The average of the numbers is: {average}")
+
+# 23. Convert temperature from Celsius to Fahrenheit
+celsius = float(input("Enter temperature in Celsius: "))
+fahrenheit = (celsius * 9/5) + 32
+print(f"{celsius} degrees Celsius is equal to {fahrenheit} degrees Fahrenheit")
+
+# 24. Find the largest element in a list
+numbers = [float(x) for x in input("Enter numbers separated by space: ").split()]
+largest_number = max(numbers)
+print(f"The largest number in the list is: {largest_number}")
+
+# 25. Check if a year is a leap year using a function
+def is_leap_year(year):
+    return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
+
+year = int(input("Enter a year to check if it's a leap year: "))
+if is_leap_year(year):
+    print(f"{year} is a leap year.")
+else:
+    print(f"{year} is not a leap year.")
+
+# 26. Find the common elements between two lists
+list1 = [int(x) for x in input("Enter numbers for list 1 separated by space: ").split()]
+list2 = [int(x) for x in input("Enter numbers for list 2 separated by space: ").split()]
+common_elements = set(list1) & set(list2)
+print(f"The common elements between the two lists are: {list(common_elements)}")
+
+# 27. Calculate the area of a triangle
+base = float(input("Enter the base length of the triangle: "))
+height = float(input("Enter the height of the triangle: "))
+area_triangle = 0.5 * base * height
+print(f"The area of the triangle is: {area_triangle}")
+
