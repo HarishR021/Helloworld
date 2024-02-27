@@ -91,3 +91,18 @@ if(hipe%2!=0):
 else:
     print("Even number")
 
+#11 Leap Year or Not
+Year=int(input("Enter: "))
+if(((Year%4==0) and (Year%100!=0)) or (Year%400==0)):
+    print("Leap Year")
+else:
+    print("Not a Leap Year")
+
+#12 Obtain all leap year in between range
+begin_year=int(input("Enter begin year: "))
+end_year=int(input("Enter end year: "))
+for year in range(begin_year,end_year+1):
+    if((year%4==0) and (year%100!=0) or (year%400==0)):
+        print(year)
+
+#
