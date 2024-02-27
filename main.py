@@ -166,12 +166,12 @@ for i in range(0,n):
     a = b
     b = c
 
-# 18. Sum of natural numbers
+# 18 Sum of natural numbers
 num = int(input("Enter a positive integer: "))
 sum_natural = sum(range(1, num + 1))
 print(f"The sum of natural numbers up to {num} is {sum_natural}")
 
-# 19. Check if a number is Armstrong
+# 19 Check if a number is Armstrong
 num = int(input("Enter a number to check if it's an Armstrong number: "))
 num_str = str(num)
 num_digits = len(num_str)
@@ -179,32 +179,32 @@ armstrong_sum = sum(int(digit) ** num_digits for digit in num_str)
 is_armstrong = armstrong_sum == num
 print(f"{num} is {'an' if is_armstrong else 'not an'} Armstrong number")
 
-# 20. Reverse a string
+# 20 Reverse a string
 string_input = input("Enter a string: ")
 reversed_string = string_input[::-1]
 print(f"The reversed string is: {reversed_string}")
 
-# 21. Check if a string is a palindrome
+# 21 Check if a string is a palindrome
 string_input = input("Enter a string to check if it's a palindrome: ")
 is_palindrome = string_input == string_input[::-1]
 print(f"The string {'is' if is_palindrome else 'is not'} a palindrome")
 
-# 22. Calculate the average of numbers in a list
+# 22 Calculate the average of numbers in a list
 numbers = [float(x) for x in input("Enter numbers separated by space: ").split()]
 average = sum(numbers) / len(numbers)
 print(f"The average of the numbers is: {average}")
 
-# 23. Convert temperature from Celsius to Fahrenheit
+# 23 Convert temperature from Celsius to Fahrenheit
 celsius = float(input("Enter temperature in Celsius: "))
 fahrenheit = (celsius * 9/5) + 32
 print(f"{celsius} degrees Celsius is equal to {fahrenheit} degrees Fahrenheit")
 
-# 24. Find the largest element in a list
+# 24 Find the largest element in a list
 numbers = [float(x) for x in input("Enter numbers separated by space: ").split()]
 largest_number = max(numbers)
 print(f"The largest number in the list is: {largest_number}")
 
-# 25. Check if a year is a leap year using a function
+# 25 Check if a year is a leap year using a function
 def is_leap_year(year):
     return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
 
@@ -214,15 +214,33 @@ if is_leap_year(year):
 else:
     print(f"{year} is not a leap year.")
 
-# 26. Find the common elements between two lists
+# 26 Find the common elements between two lists
 list1 = [int(x) for x in input("Enter numbers for list 1 separated by space: ").split()]
 list2 = [int(x) for x in input("Enter numbers for list 2 separated by space: ").split()]
 common_elements = set(list1) & set(list2)
 print(f"The common elements between the two lists are: {list(common_elements)}")
 
-# 27. Calculate the area of a triangle
+# 27 Calculate the area of a triangle
 base = float(input("Enter the base length of the triangle: "))
 height = float(input("Enter the height of the triangle: "))
 area_triangle = 0.5 * base * height
 print(f"The area of the triangle is: {area_triangle}")
 
+# 28 Check if a number is a perfect square
+import math
+
+num = int(input("Enter a number to check if it's a perfect square: "))
+sqrt_num = math.isqrt(num)
+is_perfect_square = sqrt_num**2 == num
+print(f"{num} is {'a' if is_perfect_square else 'not a'} perfect square")
+
+# 29 Count the occurrences of a specific element in a list
+numbers = [int(x) for x in input("Enter numbers separated by space: ").split()]
+element_to_count = int(input("Enter the element to count: "))
+occurrences = numbers.count(element_to_count)
+print(f"The element {element_to_count} occurs {occurrences} times in the list")
+
+# 30 Reverse a list
+original_list = [int(x) for x in input("Enter numbers separated by space: ").split()]
+reversed_list = original_list[::-1]
+print(f"The reversed list is: {reversed_list}")
